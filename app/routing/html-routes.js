@@ -1,13 +1,16 @@
-// Basic route that sends the user first to the AJAX Page
-app.get('/', function(req, res){
+var path = require('path');
 
-	//res.send("Welcome to the Star Wars Page!")
-	res.sendFile(path.join(__dirname + '/view.html'));
-})
+module.exports = function(app){
 
-// Basic route that sends the user first to the AJAX Page
-app.get('/survey', function(req, res){
+	// Basic route that sends the user first to the AJAX Page
+	app.get('/', function(req, res){
 
-	
-	res.sendFile(path.join(__dirname + '/view.html'));
-})
+		res.sendFile(path.join(__dirname + '/../public/home.html'));
+	})
+
+	//Sends user to survey page
+	app.get('/survey', function(req, res){
+
+		res.sendFile(path.join(__dirname + '/../public/survey.html'));
+	})
+};
