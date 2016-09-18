@@ -22,7 +22,7 @@ module.exports = function(app){
 		for (var i = 0; i < (friends.length - 1); i++){
 			
 			//Loop through the question values
-			for (var j = 0; j < friendsArr[i].scores.length; j++){
+			for (var j = 0; j < friends[i].scores.length; j++){
 				totalDifference += Math.abs(friends[i].scores[j] - newFriend.scores[j]);
 			}
 
